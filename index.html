@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<title>Perlin noise</title>
+<style>
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#sky {
+  width: 1280px;
+  height: 720px;
+  perspective: 600px;
+  border: solid 1px;
+  padding: 0;
+  overflow: hidden;
+  
+}
+#sky-container {
+  transform: rotateX(-45deg);
+}
+#sky canvas {
+  position: absolute;
+  width: 2780px;
+  height:1000px;
+  left: -750px;
+  top: 0;
+}
+#bg {
+  z-index: -1;
+}
+body {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+  <div id='sky'>
+    <div id='sky-container'>
+      <canvas id="bg"></canvas>
+    </div>
+  </div>
+  <script src='lib/perlin.js'></script>
+  <script src='lib/glfx.js'></script>
+  <script src='main.js'></script>
+</body>
+</html>
